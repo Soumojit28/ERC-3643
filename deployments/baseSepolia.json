@@ -2,24 +2,24 @@
   "network": "baseSepolia",
   "chainId": 84532,
   "deployer": "0xf7435724bdB056c8a2f058595781533C8173E2f7",
-  "timestamp": "2026-01-14T00:00:00.000Z",
+  "safeAddress": "0xF7bB8a7579AcF7cE0d8fE018893b91d01B7aE81c",
+  "timestamp": "2026-05-05T21:46:47.109Z",
   "implementations": {
-    "token": "0xB70A6dce963f0a398b572296D7816C13f32A2789",
-    "identityRegistry": "0xF0Dc29b9EF68ca765245F421187FA7A8034d67a8",
-    "identityRegistryStorage": "0x79433BD2E2B4bA3D00E64feF7a503e74c84f33EF",
-    "modularCompliance": "0x1E2BEBC6052caf55eFF5836b6B97fA503dE42736",
-    "trustedIssuersRegistry": "0x629E8f16216bb8913e8F11DeAF347a77bd1C51EA",
-    "claimTopicsRegistry": "0xe74DB71c2d6E517afA218706743aB070681B4e37"
+    "token": "0xaE4F3e0705815155de78C5959F2BFe28e175fC20",
+    "identityRegistry": "0x3fBBDA73913d2700Ae7f405ECB913d8aA9997B59",
+    "identityRegistryStorage": "0x869FA447E0348bA5c0c1Bf24c2904c38A6d8970D",
+    "modularCompliance": "0x92E5C6823985809b2F571D72058A8077A2CdF7ca",
+    "trustedIssuersRegistry": "0x14aF400b489F2c39578ADd01Ca888401C7e75b35",
+    "claimTopicsRegistry": "0x153583D346Eb3C20691A984e7D79c9c73205d5d0"
   },
   "onchainId": {
-    "identityImplementation": "0x9e292073492C5327440e4B756eC874127B85E4D4",
-    "identityImplementationAuthority": "0x875c42E5bDA3647A289d5b4dA600283bC1DcDE01",
-    "identityFactory": "0x64Cc2a3eD08f9Aa25eF192B57590E46D84ADbaE3"
+    "identityImplementation": "0xdE8fD54BfB012545Ff5dCbF3ff8E96c999f3F0e5",
+    "identityImplementationAuthority": "0xE7b13A3020e0979c2C87D3AFCC8E0C0d11f8c398",
+    "identityFactory": "0x08719ac7A566519877121aE78EA6cec7259EfEaA"
   },
   "infrastructure": {
-    "trexImplementationAuthority": "0x2eC8f758aac207ab43817aC2962A55de621DB5dB",
-    "trexFactory": "0x5c209e68f4885208aFDE7F11adb16DeF9db31F88",
-    "trexGateway": "0x1F598775f2d2BB4565Dae37fD3F531Af1E2b7b2B"
+    "trexImplementationAuthority": "0x41084166Dc8dFfEF044C07f8b7190Af0Eaa55E8C",
+    "trexFactory": "0xaB1C958f1707c1fb23d51F52496E930986cb23CD",
+    "trexGateway": "0x6f98FeCE893C610e69c986D36f3265f9Ac76F944"
   }
 }
-

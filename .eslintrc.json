@@ -64,5 +64,13 @@
         "tsx": "never"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["hardhat.config.js", "scripts/**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 }

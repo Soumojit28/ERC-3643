@@ -1,19 +1,21 @@
-require("@nomicfoundation/hardhat-ethers");
-require("@openzeppelin/hardhat-upgrades");
-require("@nomicfoundation/hardhat-verify");
-const dotenv = require("dotenv");
+require('@nomicfoundation/hardhat-ethers');
+require('@openzeppelin/hardhat-upgrades');
+require('@nomicfoundation/hardhat-verify');
+const fs = require('fs');
+const dotenv = require('dotenv');
+
 dotenv.config();
 function getRemappings() {
   return fs
-      .readFileSync("remappings.txt", "utf8")
-      .split("\n")
-      .filter(Boolean)
-      .map((line) => line.trim().split("="));
+    .readFileSync('remappings.txt', 'utf8')
+    .split('\n')
+    .filter(Boolean)
+    .map((line) => line.trim().split('='));
 }
 
 module.exports = {
   solidity: {
-    version: "0.8.17",
+    version: '0.8.17',
     settings: {
       optimizer: {
         enabled: true,
@@ -22,20 +24,19 @@ module.exports = {
     },
   },
   paths: {
-    sources: "./src/",
-    artifacts: "./artifacts",
-    cache: "./cache",
+    sources: './contracts/',
+    artifacts: './artifacts',
+    cache: './cache',
   },
   networks: {
-   
     baseSepolia: {
-      url: "https://rpc.ankr.com/base_sepolia/ea0fdcba2481a3863fcf3e2655da7c837d66fed33fb5efd8c760d19dbd2ef1d3",
+      url: 'https://rpc.ankr.com/base_sepolia/ea0fdcba2481a3863fcf3e2655da7c837d66fed33fb5efd8c760d19dbd2ef1d3',
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 84532,
     },
   },
   etherscan: {
-    apiKey: "2PXFYC8SA41D8XMXD6WV1PAKB3TSXFF8UU"
+    apiKey: '2PXFYC8SA41D8XMXD6WV1PAKB3TSXFF8UU',
     // apiKey: {
     //   polygonMumbai: "QFZE642XXV4YANFUCC3MQ3NERX6XH1UXAV",
     //   polygon: "E4BJZUVP3WER9IJD5QIPCTPTJRMQVFY5RZ",
@@ -240,16 +241,15 @@ module.exports = {
     blockscout: {
       enabled: false,
     },
-    
   },
   sourcify: {
     // Disabled by default
     // Doesn't need an API key
-    enabled: true
+    enabled: true,
   },
   // This fully resolves paths for imports in the ./lib directory for Hardhat
   preprocess: {
-    eachLine: (hre) => ({
+    eachLine: () => ({
       transform: (line) => {
         if (line.match(/^\s*import /i)) {
           getRemappings().forEach(([find, replace]) => {
